@@ -21,7 +21,3 @@ Petit site statique en HTML/CSS/JavaScript, prévu pour GitHub Pages. Aucun serv
 - Le site ne détecte pas les retards ou la position GPS du bus.
 - Les horaires du dimanche en juillet/août sont présents dans les pages 6–7 du PDF, mais ne sont pas intégrés dans cette première version. Le site l'indique au lieu d'inventer des horaires.
 - Le PDF source est disponible depuis le site dans `documents/fiche-horaire-ligne-a-1.pdf`.
-
-## Modifier le site
-
-Dans GitHub, ouvrez le fichier à modifier, cliquez sur le crayon, faites vos changements et cliquez **Commit changes**. GitHub Pages republie le site automatiquement.

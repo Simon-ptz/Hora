@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f2f0e9">
+  <meta name="description" content="Prochains passages théoriques de la ligne A Oléane aux Sables-d’Olonne.">
+  <title>Ligne A — prochains bus</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="Accueil Ligne A"><span class="brand-mark">A</span><span>OLÉANE <small>LES SABLES-D’OLONNE</small></span></a>
+      <span class="live-label"><span class="dot"></span> HORAIRES THÉORIQUES</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">VOTRE PROCHAIN DÉPART</p>
+      <h1>La ligne A.<br><span>Sans courir.</span></h1>
+      <p class="subtitle">Les prochains passages à votre arrêt, simplement.</p>
+    </section>
+
+    <section class="panel selectors" aria-label="Choisir son trajet">
+      <div class="field"><label for="direction">Direction</label><select id="direction"><option value="to_town">Vers Hôtel de Ville</option><option value="to_island">Vers Havre d’Olonne / L’Île d’Olonne</option></select></div>
+      <div class="field"><label for="stop">Votre arrêt</label><select id="stop"></select></div>
+      <div class="field"><label for="daytype">Horaires</label><select id="daytype"><option value="auto">Automatique selon le jour</option><option value="weekday">Lundi–vendredi</option><option value="saturday">Samedi</option></select></div>
+    </section>
+
+    <section class="hero panel" aria-live="polite">
+      <div class="hero-top"><span id="next-label">PROCHAIN PASSAGE</span><span class="pill" id="day-label">AUJOURD’HUI</span></div>
+      <div class="countdown-wrap"><div class="countdown" id="countdown">--<span>min</span></div><div class="departure"><span>Départ prévu</span><strong id="next-time">--:--</strong></div></div>
+      <div class="progress-track"><div class="progress" id="progress"></div></div>
+      <div class="hero-bottom"><span id="status">Chargement des horaires…</span><span id="current-time">--:--:--</span></div>
+    </section>
+
+    <section class="lower-grid">
+      <section class="panel departures-panel">
+        <div class="section-head"><div><p class="eyebrow">ENSUITE</p><h2>Les prochains bus</h2></div><span class="small-tag">4 passages</span></div>
+        <div id="departures" class="departures"><p class="muted">Chargement…</p></div>
+      </section>
+      <section class="panel settings-panel">
+        <div class="section-head"><div><p class="eyebrow">POUR PARTIR SEREIN</p><h2>Quand partir ?</h2></div><span class="icon-clock">↗</span></div>
+        <p class="muted settings-copy">Ajoute ton temps de marche et une petite marge. Le site calcule l’heure à laquelle tu devrais quitter la maison.</p>
+        <div class="range-row"><label for="walk">Marche jusqu’à l’arrêt</label><div class="range-value"><strong id="walk-value">5</strong> min</div></div>
+        <input id="walk" type="range" min="0" max="45" value="5">
+        <div class="range-row"><label for="margin">Marge de sécurité</label><div class="range-value"><strong id="margin-value">3</strong> min</div></div>
+        <input id="margin" type="range" min="0" max="15" value="3">
+        <div class="leave-card"><span>HEURE CONSEILLÉE POUR PARTIR</span><strong id="leave-time">--:--</strong><small id="leave-note">Pour le prochain passage</small></div>
+      </section>
+    </section>
+
+    <section class="notice"><span class="notice-icon">i</span><p><strong>À savoir</strong><br>Ce site affiche les horaires théoriques du PDF officiel, pas la position du bus en direct ni les retards. Vérifie les infos trafic sur <a href="https://www.oleane-mobilites.fr/" target="_blank" rel="noopener noreferrer">oleane-mobilites.fr</a>.</p></section>
+    <footer><span>HORAIRES VALABLES DU 31/08/2026 AU 02/07/2027</span><a href="documents/fiche-horaire-ligne-a-1.pdf" target="_blank" rel="noopener">Voir le PDF officiel ↗</a><span class="footer-right">FAIT POUR ALLER À L’ESSENTIEL.</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

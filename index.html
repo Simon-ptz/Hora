@@ -23,9 +23,10 @@
     </section>
 
     <section class="panel selectors" aria-label="Choisir son trajet">
-      <div class="field"><label for="direction">Direction</label><select id="direction"><option value="to_town">Vers Hôtel de Ville</option><option value="to_island">Vers Havre d’Olonne / L’Île d’Olonne</option></select></div>
-      <div class="field"><label for="stop">Votre arrêt</label><select id="stop"></select></div>
-      <div class="field"><label for="daytype">Horaires</label><select id="daytype"><option value="auto">Automatique selon le jour</option><option value="weekday">Lundi–vendredi</option><option value="saturday">Samedi</option></select></div>
+      <div class="field"><label for="direction">Direction</label><select id="direction"><option value="to_town">Vers Hôtel de Ville</option><option value="to_island">Vers Havre d’Olonne / L’Ile</option></select></div>
+      <div class="field"><label for="departure-stop">Arrêt de départ</label><select id="departure-stop"></select></div>
+      <div class="field"><label for="arrival-stop">Arrêt d’arrivée</label><select id="arrival-stop"></select></div>
+      <div class="field"><label for="daytype">Horaires</label><select id="daytype"><option value="auto">Automatique selon le jour</option><option value="weekday">Lundi–vendredi</option><option value="saturday">Samedi</option><option value="sunday">Dimanche</option></select></div>
     </section>
 
     <section class="hero panel" aria-live="polite">
@@ -51,8 +52,8 @@
       </section>
     </section>
 
-    <section class="notice"><span class="notice-icon">i</span><p><strong>À savoir</strong><br>Ce site affiche les horaires théoriques du PDF officiel, pas la position du bus en direct ni les retards. Vérifie les infos trafic sur <a href="https://www.oleane-mobilites.fr/" target="_blank" rel="noopener noreferrer">oleane-mobilites.fr</a>.</p></section>
-    <footer><span>HORAIRES VALABLES DU 31/08/2026 AU 02/07/2027</span><a href="documents/fiche-horaire-ligne-a-1.pdf" target="_blank" rel="noopener">Voir le PDF officiel ↗</a><span class="footer-right">FAIT POUR ALLER À L’ESSENTIEL.</span></footer>
+    <section class="notice"><span class="notice-icon">i</span><p><strong>À savoir</strong><br>Ce site affiche les horaires théoriques du PDF officiel, pas la position du bus en direct ni les retards du réseau.</p></section>
+    <footer><span>HORAIRES VALABLES DU 31/08/2026 AU 02/07/2027</span><a href="documents/fiche-horaire-ligne-a-1.pdf" target="_blank" rel="noopener">Voir le PDF officiel ↗</a><span class="footer-meta">Ligne A • Oléane</span></footer>
   </main>
   <script src="app.js"></script>
 </body>
